@@ -1,0 +1,43 @@
+{
+  "name": "parcel-skeleton",
+  "version": "1.0.0",
+  "description": "Simple parcel.js example for learning HTML, JS and CSS",
+  "scripts": {
+    "clean-dist": "rimraf dist",
+    "clean-coverage": "rimraf scr/tests-reports",
+    "start": "parcel src/index.html",
+    "lint": "eslint src/scripts/*",
+    "build": "parcel build src/index.html --public-url ./ --out-dir dist/output",
+    "dist": "npm run clean-dist && npm run build",
+    "test": "jest --watch",
+    "test-report": "npm run clean-coverage && jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/photogabble/parcel-skeleton.git"
+  },
+  "author": "Simon Dann <simon.dann@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/photogabble/parcel-skeleton/issues"
+  },
+  "homepage": "https://github.com/photogabble/parcel-skeleton#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.2",
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.5.0",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "rimraf": "^2.6.2"
+  },
+  "jest": {
+    "coverageDirectory": "src/tests-reports",
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
+  }
+}
